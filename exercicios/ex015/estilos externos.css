@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+        body{
+            background-color: rgb(80, 255, 147);
+            font-family: courier;
+        }
+        h1{
+            background-color: rgb(31, 29, 29);
+            color: beige;
+        }
+        h2{
+            color: rgb(10, 10, 59);
+        }
+        p{
+            color: rgb(27, 27, 21);
+        }
+

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+    background-color: #45C4B0;
+
+}
+#principal{
+    text-align: center;
+    color:#13678A ;
+}
+.principal{
+    background-color:#012030 ;
+    color: #DAFDBA;
+    text-align: center;
+}
+.basico{
+    color: #DAFDBA ;
+    text-align: center;
+}
+.inter{
+    color:#DAFDBA;
+    text-align: center;
+}
+.ava{
+    color: #DAFDBA;
+    text-align: center;
+}
+#pp{
+    text-align: justify;
+    color: ;
+}
