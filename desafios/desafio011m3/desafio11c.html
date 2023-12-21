@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 011 m3 v.3</title>
+    <style>
+        /* configuração para ajustar a imagem a qualquer tamanho de tela*/
+        #container{
+            background-image: url(espaco.jpg);
+            background-size: 100% 100%; /*usa 100% do tamanho da imagem*/
+            position: relative;
+            height: 90vh; /* ajusta ao tamanho da tela*/
+            padding: 10px;
+        }
+        #conteudo{
+            background-image: url(astronauta.png);
+            background-size: 100% 100%;
+            width: 150px;
+            height: 150px;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+</body>
+</html>

@@ -6,26 +6,28 @@
     <title>Desafio 011 modelo 2</title>
 </head>
 <style>
-    *{
-        margin: 0px;
-        padding: 0px;
-    }
+   
     #fora{
+       border: 2px solid yellow;
+       position: relative;
        background-image: url(espaco.jpg);
        background-size: contain;
        background-repeat: no-repeat;
-       width: 900px;
-       height: 900px;
-       margin: 50px;
-      
+       width: 600px;
+       height: 600px;
+       margin: 10px; 
     }
     #dentro{
+        border: 2px solid yellow;
+        position: absolute;
         background-image: url(astronauta.png);
         background-size: contain;
         background-repeat: no-repeat;
         width: 200px;
-        height: 500px;
-        transform: translate(220%, -180%);
+        height: 200px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-90%, -120%);
     }
 </style>
 <body>
