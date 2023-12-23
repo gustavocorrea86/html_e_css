@@ -15,6 +15,10 @@
         font-family: poema;
         src: url(CedarvilleCursive-Regular.ttf);
     }
+    @font-face{
+        font-family: cavet;
+        src: url(Caveat-Regular.ttf);
+    }
     *{
         margin: 0px;
         padding: 0px;
@@ -37,13 +41,16 @@
         color: white;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         padding-bottom: 40px;
+        
     }
     main p{
-        font-family: 'poema', Courier, monospace;
+        font-family: 'cavet', Courier, monospace;
         color: black;
         font-weight: bolder;
         font-size: 3vw;
         padding: 35px;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+       
     }
     .normal{
         height:55vw;
@@ -91,13 +98,20 @@
         padding: 5px;
         text-align: center;
     }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
     
     
 </style>
 <body>
     <header>
-        <h1>Cordel Moderno</h1>
-        <p>Por <strong>Milton Duarte</strong></p>
+        <h1><a href="https://www.recantodasletras.com.br/poesias/3186743" target="_blank">Cordel Moderno</a></h1>
+        <p>Por <strong><a href="https://www.recantodasletras.com.br/autor_textos.php?id=9806">Milton Duarte</a></strong></p>
     </header>
     <main>
         <section class="normal">
