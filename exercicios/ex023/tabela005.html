@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    table{
+        width: 400px;
+        border-collapse: collapse;
+    }
+    th, td{
+        border: 1px solid black;
+        padding: 10px;
+    }
+    .nome{
+        background-color: aqua;
+    }
+    .sexo{
+        background-color: brown;
+    }
+</style>
+<body>
+    <h1>Exercicio de Tabelas</h1>
+    <table>
+        <colgroup>
+            <col class="nome">
+            <col class="sexo" span="2">
+            <col class="idade">
+            <col class="profissão">
+        </colgroup>
+        <caption> Cadastro</caption>
+        <tr>
+            <th>Nome</th>
+            <th>Sexo</th>
+            <th>Idade</th>
+            <th>Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>f</td>
+            <td>25</td>
+            <td>jornalista</td>
+        </tr>
+        <tr>
+            <td> Claudio</td>
+            <td>m</td>
+            <td>30</td>
+            <td>Sushiman</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Marco</td>
+            <td>M</td>
+            <td>45</td>
+            <td>advogado</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
