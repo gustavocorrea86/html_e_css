@@ -12,39 +12,325 @@
         body{
             background-color: cadetblue;
         }
-        section{
+        /*================== flex-direction ===============*/
+        header{
             background-color: rgba(240, 248, 255, 0.281);
             display: flex;
             flex-direction: row-reverse;
-            /*align-items: center;*/
+            /*justify-content: center;  /*igual ao text-align*/
         }
         @media( max-width: 600px){
-            section{
-                flex-direction: column;
+            header{
+                display: flex;
+                flex-direction: row-reverse;
             }
         }
-        section > div{
+        header > div{
             background-color: rgba(0, 0, 255, 0.349);
             margin: 10px;
-            width: 100px;
+            width: 10px;
             padding: 20px;
             border-radius: 10px;
             /*transition: all 150ms ease;*/
-           
         }
-        div:hover{
+        header > div:hover{
             background-color: rgb(255, 255, 255, 0.4);
         }
 
+        /*================== flex-wrap ====================*/
+
+        h1{
+            margin-top: 30px;
+            text-align: center;
+        }
+        #wrap{
+            background-color: rgba(240, 248, 255, 0.281);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            text-align: center; /*alinha os itens de dentro da div*/
+        }
+        #wrap > div{
+            background-color: rgba(255, 99, 71, 0.5);
+            margin: 10px;
+            width: 60px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #wrap > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+        /*================== Justify-content ====================*/
+
+        #just-cont{
+            background-color: rgba(240, 248, 255, 0.185);
+            display: flex;
+           /*justify-content: space-around; /* espaços entre com espaço nas laterais*/
+           /*justify-content: center; /* centraliza */
+           /*justify-content: space-between; /*espaços entre sem espaços nas laterais*/
+           justify-content: space-around;
+           flex-direction: row-reverse
+        }
+        #just-cont > div{
+            background-color: rgba(184, 135, 11, 0.445);
+            margin: 10px;
+            width: 60px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #just-cont > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+        /*================== Align-items ====================*/
+
+        #align-items{
+            background-color: rgba(240, 248, 255, 0.185);
+            display: flex;
+            height: 150px;
+            align-items: flex-start;
+            justify-content:center ;
+        }
+        #align-items > div{
+            background-color: rgba(11, 121, 184, 0.432);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #align-items > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+
+        /*================== Align-content ====================*/
+
+        #align-content{
+            background-color: rgba(240, 248, 255, 0.185);
+            display: flex;
+            height: 300px;
+            flex-wrap: wrap;
+            align-items: center;
+            align-content: flex-start;
+            
+        }
+        #align-content > div{
+            background-color: rgba(11, 184, 20, 0.301);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #align-content > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+         /*================== Order ====================*/
+
+         #order{
+            background-color: rgba(255, 255, 255, 0.24);
+            display: flex;
+            flex-direction: column;
+            
+        }
+        #order > div{
+            background-color: rgba(184, 11, 141, 0.301);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        #order > div:nth-child(1){
+            order: 4; /* altera a ordem dos elementos -  O 1 foi para o 4*/
+        }
+        #order > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+        
+
+        /*================== Align-Self ====================*/
+
+        .a-self{
+            background-color: rgba(255, 255, 255, 0.253);
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            width: 350px;
+            height: 400px;  
+        }
+        .a-self > div{
+            background-color: rgba(184, 11, 11, 0.301);
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .a-self > div:nth-child(2) {
+            align-self: center;
+            width: 50px;
+        }
+        .a-self > div:nth-child(1) {
+            align-self: center; 
+            height: 100px;  
+        }
+        .a-self > div:nth-child(3) {
+            align-self: stretch;
+        }
+        .a-self > div:nth-child(4) {
+            align-self: center;
+        }
+        .a-self > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+        /*================== Flex-grow ====================*/
+
+        .flex-grow{
+            background-color: rgba(255, 255, 255, 0.253);
+            border: 1px solid saddlebrown;
+            display: flex;
+            width: 800px;
+            margin-bottom: 50px;
+        }
+        .flex-grow > div{
+            background-color: rgba(104, 131, 184, 0.253);
+            width: 100px;
+            border: 2px solid white;
+            padding: 20px 0;
+            text-align: center;
+            flex-grow: 1; /* preenche o espaço de todos*/
+        }
+        .flex-grow > div:nth-child(2) {
+            flex-grow: 5; /* preenche o espaço da div selecionada conforme o valor e na proporção do espaço vazio*/
+        }
+        .flex-grow > div:nth-child(1) {
+           flex-shrink: 30;
+        }
+        .flex-grow > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+        /*================== Flex-bases & Flex ====================*/
+
+        .flex-bases{
+            background-color: rgba(255, 255, 255, 0.253);
+            display: flex;
+            margin-bottom: 40px;
+            width: 600px;
+            
+        }
+        .flex-bases > div{
+            background-color: rgba(5, 56, 158, 0.466);
+            border: 2px solid black;
+            margin: 0px;
+            padding: 10px 0 ;
+            text-align: center;
+            border-radius: 10px;
+            flex: 1 1 auto; /*shorthand*/
+           /* flex-basis: 150px; /* vai preencher ate o limite do container */
+        }
+        .flex-bases > div:hover{
+            background-color: rgb(255, 255, 255, 0.4);
+        }
+
+         /*================== Multcolunas de altura igual ====================*/
+        
+         
     </style>
 </head>
 <body>
     <main>
-        <section>
+        <h1>Header Flex-direction</h1>
+        <header>
             <div>1</div>
             <div>2</div>
             <div>3</div>
             <div>4</div>
+        </header>
+        <h1>Section flex-wrap</h1>
+        <section id="wrap">
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+        </section>
+
+        <h1>Section Justify-Content</h1>
+        <section id="just-cont">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+
+        <h1>Section Align-items</h1>
+        <section id="align-items">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+        <h1>Section Align-content</h1>
+        <section id="align-content">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+        </section>
+
+        <h1>Section Order</h1>
+        <section id="order">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+
+        <h1>Section Align-self</h1>
+        <section class="a-self">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+
+        <h1>Section Flex-grow e Flex-Shrink</h1>
+        <section class="flex-grow">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section>
+
+        <h1>Section Flex-bases & flex</h1>
+        <section class="flex-bases">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+        </section id >
+        
+        <section>
+
         </section>
     </main>
         
