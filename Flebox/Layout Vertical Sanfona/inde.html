@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Sanfona</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: cadetblue;
+        }
+        main{
+            display: flex;
+            height: 100vh;
+            
+        }
+        main > div{
+            padding: 20px;
+            flex: 1;
+            border: 1px solid rgba(255, 255, 255, 0.404);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            transition: 1000ms;
+            
+        }
+        main > div:hover{
+            flex-basis: 70vw;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div style="background-image:url(imagens/imagem1.jpg);">
+       
+        </div>
+
+        <div style="background-image:url(imagens/imagem2.jpg);">
+           
+        </div>
+
+        <div style="background-image:url(imagens/imagem3.jpg);">
+           
+        </div>
+
+        <div style="background-image:url(imagens/imagem4.jpg);"></div>
+        <div style="background-image:url(imagens/imagem5.jpg);"></div>
+        <div style="background-image:url(imagens/imagem6.jpg);"></div>
+        <div style="background-image:url(imagens/imagem7.jpg);"></div>
+        <div style="background-image:url(imagens/imagem8.jpg);"></div>
+
+    </main>
+</body>
+</html>

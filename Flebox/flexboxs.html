@@ -19,12 +19,6 @@
             flex-direction: row-reverse;
             /*justify-content: center;  /*igual ao text-align*/
         }
-        @media( max-width: 600px){
-            header{
-                display: flex;
-                flex-direction: row-reverse;
-            }
-        }
         header > div{
             background-color: rgba(0, 0, 255, 0.349);
             margin: 10px;
@@ -32,9 +26,11 @@
             padding: 20px;
             border-radius: 10px;
             /*transition: all 150ms ease;*/
+           
         }
         header > div:hover{
             background-color: rgb(255, 255, 255, 0.4);
+          
         }
 
         /*================== flex-wrap ====================*/
@@ -85,13 +81,12 @@
         }
 
         /*================== Align-items ====================*/
-
         #align-items{
             background-color: rgba(240, 248, 255, 0.185);
             display: flex;
             height: 150px;
-            align-items: flex-start;
-            justify-content:center ;
+            align-items: flex-start; 
+            justify-content: space-around;
         }
         #align-items > div{
             background-color: rgba(11, 121, 184, 0.432);
@@ -112,7 +107,7 @@
             height: 300px;
             flex-wrap: wrap;
             align-items: center;
-            align-content: flex-start;
+            align-content: flex-end;
             
         }
         #align-content > div{
@@ -233,7 +228,35 @@
         }
 
          /*================== Multcolunas de altura igual ====================*/
+        .container{
+            background-color: rgba(255, 255, 255, 0.253);
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            justify-content: center;
+        }
+        .card{
+            background-color: rgba(137, 43, 226, 0.192);
+            width: 250px;
+            padding: 10px;
+            margin: 5px;
+            text-align: left;
+            
+        }
+        .card_content{
+            padding: 0px;
+        }
+        @media ( max-width: 600px ){
+            .card{
+                width: 100px;
+            }
+            img{
+                width: 100px;
+                height: 120px;
+            }
+        }
         
+         
          
     </style>
 </head>
@@ -327,10 +350,38 @@
             <div>2</div>
             <div>3</div>
             <div>4</div>
-        </section id >
+        </section>
         
-        <section>
+        <section class="container">
+            <article class="card">
+                <img src="imagens/256x256.jpg" alt="">
+                <div class="card_content">
+                    <h2>Teste com Imagens</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, rerum? Necessitatibus inventore architecto voluptas iure, ab saepe incidunt hic consectetur vero quis beatae totam cupiditate, accusamus ipsum suscipit tempora! Voluptates?
+                    </p>
+                </div>
+            </article>
 
+            <article class="card">
+                <img src="imagens/236x419.jpg" alt="">
+                <div class="card_content">
+                    <h2>Teste com Imagens</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, rerum? Necessitatibus inventore architecto voluptas iure, ab saepe incidunt hic consectetur vero quis beatae totam cupiditate, accusamus ipsum suscipit tempora! Voluptates?
+                    </p>
+                </div>
+            </article>  
+
+            <article class="card">
+                <img src="imagens/256x256.jpg" alt="">
+                <div class="card_content">
+                    <h2>Teste com Imagens</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, rerum? Necessitatibus inventore architecto voluptas iure, ab saepe incidunt hic consectetur vero quis beatae totam cupiditate, accusamus ipsum suscipit tempora! Voluptates?
+                    </p>
+                </div>
+            </article>  
         </section>
     </main>
         
