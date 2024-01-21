@@ -80,7 +80,7 @@
        /*==================== Ocupando Espaços1 =========================*/
 
        section#ocupandoEspacos1{
-        background-color: rgba(119, 136, 153, 0.377);
+            background-color: rgba(119, 136, 153, 0.377);
             margin-bottom: 50px;
             display: grid;
             grid-template-columns:repeat(5, 1fr);/* 4 colunas com 1 fração do espço cada*/
@@ -94,7 +94,6 @@
         }
         section#ocupandoEspacos1 > div{
             background-color: royalblue;
-            
         }
         section#ocupandoEspacos1 > div:nth-child(even){
             background-color: skyblue;
@@ -172,6 +171,7 @@
         grid-auto-rows: 200px;/* add linhas automaticamente*/
         grid-gap: 10px;
         margin-bottom: 50px;
+        margin-top: 20px;
            
         }
         section#sobreposicao_conteudo > div:nth-child(1){
@@ -187,7 +187,7 @@
         section#sobreposicao_conteudo > div:nth-child(3){
             grid-column: 3 / 5;
             grid-row: 3 / 5;
-            z-index: 2; /* se sobrepoem ao elemento de cime e de baixo*/
+            z-index: 2; /* se sobrepoem ao elemento de cima e de baixo*/
         }
         section#sobreposicao_conteudo > div:nth-child(4){
             grid-column: 4 / 6;
@@ -197,18 +197,56 @@
             grid-column: 5 / 7;
             grid-row: 5 / 7;
         }
-
-
         section#sobreposicao_conteudo > div{
             background-color: royalblue;
-            
         }
         section#sobreposicao_conteudo > div:nth-child(even){
             background-color: skyblue;
         }
-        
-        
-        
+
+         /*==================== areas_grid =========================*/
+
+        @media (min-width: 768px){
+            section#areas_grid{
+                background-color: rgba(119, 136, 153, 0.377);
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                /*grid-template-rows: repeat(2, 200px);*/
+                grid-template-rows: repeat(3, minmax(200px, auto));
+                grid-gap: 10px;
+                margin-bottom: 50px;
+                margin-top: 20px;
+                font-size: 30px;
+                text-align: center;
+                grid-template-areas: 
+                    "header header header header"
+                    "section1 main main section2"
+                    "footer footer footer footer"
+                ;
+            }
+        }
+        header{
+            grid-area: header;
+        }
+        main{
+            grid-area: main;
+        }
+        #sec1{
+            grid-area: section1;
+        }
+        #sec2{
+            grid-area: section2;
+        }
+        footer{
+            grid-area: footer;
+        }
+        section#areas_grid *{
+            background-color: royalblue;
+        }
+        section#areas_grid> *:nth-child(even){
+            background-color: skyblue;
+        }
+
     </style>
 </head>
 <body>
@@ -292,8 +330,19 @@
             <div>5</div>
         </section>
 
+        <div class="divisao"><p>/*==================== areas_grid =========================*/</p></div>
 
-       
+        <section id="areas_grid">
+            <header>Header</header>
+            <main>Main Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eos ut aperiam qui rem porro id alias non consequatur sequi repellat, omnis quas quibusdam illum vitae nam maiores labore debitis! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat nobis, nemo ab non minus, quaerat aliquid nisi necessitatibus repellat culpa, quidem dolore magni error dolorum neque quo numquam deleniti iusto?</main>
+            <section id="sec1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus delectus quibusdam quaerat! Temporibus voluptas ad laborum, id quaerat incidunt expedita molestiae nesciunt quas optio sapiente, officia totam necessitatibus? Vel, quo?
+            </section>
+            <section id="sec2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident unde expedita reiciendis consequatur velit modi est minus quae repellat. Facilis laudantium ab laboriosam consequuntur, alias maxime? Dignissimos quaerat nemo quae.
+            </section>
+            <footer>Footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel laborum ipsum omnis. Fugiat omnis minus hic ipsum ducimus culpa velit quisquam molestias sunt suscipit amet, quaerat iusto tenetur nemo earum.</footer>
+        </section>
     </main>
 </body>
 </html>
