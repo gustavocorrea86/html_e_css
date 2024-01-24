@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica2 com Grid-Area</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        body{
+            display: grid;
+            grid-gap: 5px;
+            height: 100vh;
+            grid-template-areas: 
+            "header header header header header header header header"
+            ".hero hero hero hero hero hero."
+            ".hero hero hero hero hero hero."
+            ".hero hero hero hero hero hero."
+            ".hero hero hero hero hero hero."
+            ".asidesub1 asidesub2 asidesub3 asidesub4 asidesub5 asidesub6."
+            ".asidecont asidecont asidecont asidecont asidecont asidecont."
+            "aside aside aside aside aside aside aside."
+            "footer footer footer footer footer footer footer footer"
+            ;
+        }
+        header{
+            background-color: rgba(65, 105, 225, 0.603);
+            grid-area: header;
+        }
+        #asidehero{
+            background-color: rgba(137, 43, 226, 0.521);
+            grid-area: hero;
+       }
+       #asidesub1{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub1;
+            grid-gap: 5px;
+       }
+       #asidesub2{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub2;
+       }
+       #asidesub3{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub3;
+       }
+       #asidesub4{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub4;
+       }
+       #asidesub5{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub5;
+       }
+       #asidesub6{
+            background-color: rgba(255, 166, 0, 0.466);
+            grid-area: asidesub6;
+       }
+       #content{
+            background-color: rgba(46, 139, 86, 0.5);
+            grid-area: asidecont;
+       }
+       #aside{
+            background-color: rgba(95, 158, 160, 0.507);
+            grid-area: aside;
+       }
+        footer{
+            background-color: rgba(65, 105, 225, 0.479);
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+        <header>Header</header>
+        <aside id="asidehero">Hero</aside>
+        <aside id="asidesub1">Sub1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quisquam esse mollitia molestias alias corrupti temporibus minus consequuntur officiis laborum, amet suscipit doloribus illo perferendis necessitatibus deleniti laboriosam impedit sequi.</aside>
+        <aside id="asidesub2">Sub2 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus recusandae voluptates non ipsa magni, vitae aspernatur rerum doloribus assumenda nemo iusto ipsam, iste quis reprehenderit voluptate odit id laudantium beatae?</aside>
+        <aside id="asidesub3">Sub3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora pariatur accusamus soluta natus eum, aperiam repellat est amet cum tempore facere dolore aliquid. Rerum adipisci fugit eveniet odio assumenda sapiente.</aside>
+        <aside id="asidesub4">Sub4 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi repellendus eius adipisci eum aliquam ratione explicabo tenetur, culpa, cum non atque maxime minus unde harum incidunt placeat. Iusto, nesciunt quo.</aside>
+        <aside id="asidesub5">Sub5 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam sapiente dolorum deleniti amet soluta debitis alias minus, vero, voluptate sint voluptates porro minima voluptas! Natus velit praesentium maxime aut a?</aside>
+        <aside id="asidesub6">Sub6 Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, laborum aut natus quibusdam dignissimos beatae corporis tempora at eaque et architecto optio similique doloremque voluptatem officia. Asperiores quod porro possimus.</aside>
+        <aside id="content">Content</aside>
+        <aside id="aside">Aside</aside>
+        <footer>Footer</footer>
+</body>
+</html>

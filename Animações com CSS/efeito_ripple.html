@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Ripple</title>
+    <style>
+       body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+       }
+       .button{
+            padding: 60px 100px;
+            text-decoration: none;
+            background-color: rgba(0, 0, 0, 0.678);
+            border-radius: 120px;
+            position: relative;
+            overflow: hidden;
+       }
+       .button > span{
+           
+            font-size: 30px;
+            position: relative;
+            color: white;
+           
+       }
+       .button::before{
+            content:" ";
+            background-color: rgba(255, 68, 0, 0.568);
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            border-radius: 50%;
+            left: var(--eixoX);
+            top: var(--eixoY);
+            transform: translate(-50%, -50%);
+            transition: width .5s, height .5s;
+       }
+       .button:hover::before{
+        width: 1000px;
+        height: 1000px;
+       }
+    </style>
+</head>
+<body>
+    <!--<button class="button">
+        <a  href="/">Clique aqui!!</a>
+    </button>-->
+    <a href="/" class="button"><span>Clique Aqui!!!</span></a>
+</body>
+<script>
+    var btn = document.querySelector('.button')
+    btn.onmousemove = function(e){
+        var x = e.pageX - btn.offsetLeft;
+        var y = e.pageY - btn.offsetTop;
+
+        btn.style.setProperty('--eixoX', x + 'px')
+        btn.style.setProperty('--eixoY', y + 'px')
+    }
+</script>
+</html>

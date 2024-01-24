@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Skills em barras</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            height: 100vh;
+            background-color: lightgrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .skills{
+            width: 500px;
+            padding: 40px;
+            border-radius: 20px;
+            background-color: white;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.486), 0 -5px 5px rgba(0, 0, 0, 0.404);
+        }
+        .skills > ul{
+            list-style: none;
+        }
+        .skills > ul > li{
+            margin: 20px 0;
+        }
+        .skills .barras{
+            background-color:rgba(211, 211, 211, 0.507);
+            display: block;
+            height: 20px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .5s ease-in-out;
+        }
+        .barras > span{
+            height: 20px;
+            background-image: linear-gradient(to right, orange, rgba(180, 55, 76, 0.719));
+            position: absolute;
+            border-radius: 20px;
+            
+        }
+        .html{
+            width: 80%;
+            animation: html 3s;
+        }
+        .css{
+            width: 40%;
+            animation: css 3s;
+        }
+        .js{
+            width: 20%;
+            animation: js 3s;
+        }
+        @keyframes html{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 80%;
+            }
+        }
+        @keyframes css{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 40%;
+            }
+        }
+        @keyframes js{
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 20%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="skills">
+        <h1>Minhas habilidades</h1>
+        <ul>
+            <li>
+                <h3>HTML</h3>
+                <span class="barras"><span class="html"></span></span>
+            </li>
+            <li>
+                <h3>CSS</h3>
+                <span class="barras"><span class="css"></span></span>
+            </li>
+            <li>
+                <h3>JavaScript</h3>
+                <span class="barras"><span class="js"></span></span>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

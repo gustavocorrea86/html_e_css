@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito passagem de Imagem</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div.boxImage{
+            width: 700px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        div.antes{
+            background-image: url(imagens/space-11099_640.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 700px;
+            height: 400px;
+            position: absolute;
+        }
+        div.depois{
+            background-image: url(imagens/lagoon-nebula-11143_640.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            width: 700px;
+            height: 400px;
+            position: absolute;
+            bottom: 100%;
+        }
+        div.boxImage:hover .depois{
+            bottom: 0%;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxImage">
+        <div class="antes"><span>Antes</span></div>
+        <div class="depois"><span>Depois</span></div>
+    </div>
+</body>
+</html>

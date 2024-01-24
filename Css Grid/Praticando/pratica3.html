@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pratica 3</title>
+    <style>
+        main{
+            height: 100px;
+            display: grid;
+            grid-gap: 5px;
+            grid-template-columns: repeat(6, 1fr);
+            margin: 0 auto;
+        }
+        @media(min-width: 400px) {
+            main{
+                grid-template-areas: 
+            "title title title title title title"
+            "meta meta meta meta meta meta"
+            "copy1 copy1 copy1 copy1 copy1 copy1"
+            "copy2 copy2 copy2 copy2 copy2 copy2"
+            "media media media media media media"
+            "aside aside aside aside aside aside"
+            ;
+            }  
+        }
+        @media(min-width: 768px) {
+            main{
+                grid-template-areas: 
+            "meta title title title title title"
+            "copy1 copy1 copy1 copy1 copy1 copy1"
+            "copy2 copy2 copy2 copy2 copy2 copy2"
+            "media media media media media aside"
+            ;
+            }  
+        }
+        @media(min-width: 992px) {
+            main{
+                grid-template-areas: 
+            " meta title  title  title  copy2  copy2"
+            "copy1  copy1  copy1  copy1 copy2  copy2"
+            "copy1  copy1  copy1  copy1 copy2  copy2"
+            "media  media  media  media  media  media"
+            "aside aside   .      .      .      .    "
+            ;
+            }  
+        }
+        .title{
+            background-color: rgba(27, 72, 73, 0.479);
+            grid-area: title;
+        }
+        .meta{
+            background-color: rgba(210, 105, 30, 0.562);
+            grid-area: meta;
+        }
+        .copy1{
+            background-color: rgba(127, 255, 212, 0.562);
+            grid-area: copy1;
+        }
+        .copy2{
+            background-color: rgba(222, 184, 135, 0.521);
+            grid-area: copy2;
+        }
+        .media{
+            background-color: rgba(153, 205, 50, 0.486);
+            grid-area: media ;
+        }
+        .aside{
+            background-color: rgba(238, 130, 238, 0.5);
+            grid-area: aside;
+        }
+        main > *{
+            padding: 20px;
+            min-height: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <div class="title">Title</div>
+        <div class="meta">Meta</div>
+        <div class="copy1">Copy1</div>
+        <div class="copy2">Copy2</div>
+        <div class="media">Media</div>
+        <div class="aside">Aside</div>
+    </main>
+</body>
+</html>

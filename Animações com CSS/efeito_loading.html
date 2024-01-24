@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito Loading</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            min-height: 100vh;
+            background-color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #loading{
+            width: 60px;
+            height: 60px;
+            border: 10px solid cadetblue;
+            border-top: 10px solid transparent;
+            border-radius: 50%;
+
+            /*animation: loading 1s linear infinite;*/
+            animation: loading 1s ease-in-out infinite;
+        }
+        @keyframes loading{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading"></div>
+</body>
+</html>

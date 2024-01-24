@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito texto sendo digitado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: cursive;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        .txt_animado{
+            font-size: 50px;
+            font-weight: 300;
+        }
+        .txt_animado > span{
+            position: relative;
+        }
+        .txt_animado span::before{
+            content: " ";
+            color: palevioletred;
+            animation: palavras 15s infinite;
+        }
+        /*efeito cursor*/
+        .txt_animado span::after{ 
+            content: "";
+            position: absolute;
+            height: 100%;
+            border-left:2px solid palevioletred;
+            right: -10px;
+            animation: cursor .8s infinite, digitar 15s steps(15) infinite;
+            width: calc(100% + 20px);
+            background-color: rgb(0, 0, 0);
+           
+        }
+        @keyframes digitar{
+            10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+                width: 0;
+            }
+            5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+                width: calc(100% + 20px);
+            } 
+        }
+        @keyframes cursor{
+            0%{
+                border-left:2px solid rgb(0, 0, 0);
+            }
+        }
+        /*efeito digitação*/
+        @keyframes palavras{
+            0%,20%{
+                content:"é chata! mas...";
+            }
+            21%, 40%{
+                content: " fez o almoço pra gente, mas...";
+            }
+            41%, 60%{
+                content: "continua sendo chata";
+            }
+            61%, 80%{
+                content: "merece um obrigado, mas...";
+            }
+            81%, 100%{
+                content: "continua sendo chata!";
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="txt_animado">
+        Você <span contenteditable="false"></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito de Vidro</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-image: url(imagem4.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        .container{
+            background-color: transparent;
+            width: 500px;
+            padding: 30px;
+            border: 2px solid white;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            backdrop-filter: blur(px);
+            overflow: hidden;
+        }
+        .text{
+            color: white;
+            position: relative;
+            top: 200px;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.466);
+        }
+        .container:hover .text{
+            top:0;
+            transition: 1s;
+        }
+        .container:hover{
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            border: 2px solid rgba(255, 255, 0, 0.767);
+            transition: 4s;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Bom dia e Cia</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem tempore, dignissimos explicabo hic et at nesciunt molestias vitae minus cupiditate facilis fugit quisquam est vero aliquid! Architecto facere culpa cupiditate.</p>
+        </div>
+    </div>
+</body>
+</html>

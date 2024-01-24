@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efeito background menu animado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        header{
+            width: 100vw;
+            height: 100vh;
+            padding: 30px;
+            background-color: black;
+        }
+        nav{
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav > a{
+            padding: 7px;
+            border-radius: 10px;
+            font-size: 30px;
+            text-decoration: none;
+            margin: 30px;
+            color: white;
+            font-family: cursive;
+            transition: .5s;
+            position: relative;
+        }
+        .nav1:hover .link1{
+            opacity: .3;
+        }
+        .nav1 > .link1:hover{
+            opacity: 1;
+            transform: scale(1.2);
+        }
+        .nav2 > .link2:hover{
+            background-color:rgba(255, 127, 80, 0.603) ;
+            color: black;
+            transition: .5s;
+            animation: effect .8s infinite steps(1);
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.479);
+        }
+        @keyframes effect{
+            0%{
+                transform: scale(.8);
+                border: 2px solid white;
+                transform: rotate(3deg);
+                color: black;
+            }
+            50%{
+                transform: scale(1.1);
+                border: 3px solid white;
+                color: white;
+            }
+            100%{
+                transform: scale(.8);
+                border: 6px solid white;
+                transform: rotate(-3deg);
+                color: black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav1">
+            <a class="link1" href="/">Curriculum</a>
+            <a class="link1" href="/">Cursos</a>
+            <a class="link1" href="/">Portifólio</a>
+            <a class="link1" href="/">Contato</a>
+            <a class="link1" href="/">Sobre</a>
+        </nav>
+        <nav class="nav2">
+            <a class="link2" href="/">Curriculum</a>
+            <a class="link2" href="/">Cursos</a>
+            <a class="link2" href="/">Portifólio</a>
+            <a class="link2" href="/">Contato</a>
+            <a class="link2" href="/">Sobre</a>
+        </nav>
+    </header>
+    <section>
+
+    </section>
+    
+</body>
+</html>

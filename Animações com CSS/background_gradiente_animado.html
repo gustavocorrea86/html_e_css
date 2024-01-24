@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradiente animado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: blanchedalmond;
+            height: 100vh;
+            
+        }
+        main{
+            margin-top: 300px;
+            background-image: linear-gradient(to left, rgba(38, 38, 119, 0.8), rgba(68, 133, 68, 0.644), rgba(156, 122, 58, 0.616), rgba(255, 0, 0, 0.568), rgba(95, 95, 14, 0.712));
+            border: 1px solid white;
+            width: 100vw;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: 500% 100%;
+            animation: gradiente_animado 5s infinite alternate;
+            font-size: 30px;
+            color: white;
+        }
+        @keyframes gradiente_animado{
+            0%{
+                background-position-x: 0%;
+            }
+            100%{
+                background-position-x: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Hello!!</h1>
+    </main>
+</body>
+</html>

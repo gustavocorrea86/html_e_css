@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto gradiente animado</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            /*color: white;*/
+            font-size: 70px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            text-transform: uppercase;
+            font-weight: bold;
+
+            background-image: linear-gradient(45deg,rgba(77, 77, 165, 0.466), rgba(255, 255, 0, 0.856), rgba(255, 0, 0, 0.63) );
+            background-size: 400% 100%;
+            animation: textColors 2s linear infinite;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            outline: none;
+        }
+        @keyframes textColors{
+            0%{
+                background-position-x: 0%;
+            }
+            100%{
+                background-position-x: 400%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div contenteditable="true">Texto Animado</div>
+</body>
+</html>
