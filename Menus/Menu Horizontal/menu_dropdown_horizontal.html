@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Dropdown 1</title>
+    <title>Menu Dropdown Horizontal</title>
 </head>
 <style>
     *{
@@ -13,10 +13,17 @@
         list-style: none;
     }
     /*----------------menu----------------------*/
+    body{
+        height: 100vh;
+        background-image: url(imagens/background1.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
     nav{
         width: 100%;
         min-height: 100px;
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0.603);
         display: flex;
     }
     nav .logo{
@@ -37,14 +44,16 @@
         text-align: center;
         font-size: 20px;
     }
-    .menu li:hover{
-        background-color: cadetblue;
-    }
     .menu li a{
         color: white;
         text-decoration: none;
     }
-    /*---------------- Produtos ----------------------*/
+    .menu li:hover{
+        background-color: rgba(65, 105, 225, 0.548);
+    }
+    
+    
+    /*---------------- Classe Produtos ----------------------*/
     .produtos{
         position: relative;
     }
@@ -68,8 +77,8 @@
         padding: 10px;
     }
     .subProdutos a:hover{
-        background-color: cadetblue;
-        color: black;
+        background-color: rgba(65, 105, 225, 0.548);
+        color: white;
     }
     .produtos:hover .subProdutos{
         display: flex;
@@ -176,7 +185,7 @@
                 </div>
                 
                 <div class="servicos">
-                    <li><a href="#">Serviços</a></li>
+                    <li><a href="#">Serviços▾</a></li>
                     <div class="subServicos">
                         <a href="#">Serviço 1▸</a>
                         <a href="#">Serviço 2</a>
