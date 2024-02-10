@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Homepage</title>
+</head>
+<style>
+    :root{
+        --azulEscuro: rgb(11, 11, 34);
+        --orange: rgba(218, 151, 28, 0.623);
+        --cinzaClaro: rgb(202, 222, 243);
+        --vermelho: rgba(219, 63, 63, 0.589);
+    }
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    body{
+        margin: 10px;
+        background-color:rgb(202, 222, 243); 
+    }
+    header{
+        background-color: antiquewhite;
+    }
+    nav{
+        display: flex;
+    }
+    .logo{
+        padding: 20px;
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .menu li{
+        list-style: none;
+        padding: 20px;
+    }
+    .menu li a{
+        text-decoration: none;
+        color: var(--cinzaClaro);
+    }
+    .menu li a:hover{
+        color: var(--orange);
+    }
+    main{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, minmax(200px, auto));
+        grid-template-areas: 
+        "sec1 sec1 sec2"
+        "sec1 sec1 sec2"
+        "sec3 sec3 sec3";
+    }
+    .sec1{
+        grid-area: sec1;
+        background-color: violet;
+    }
+    .sec2{
+        grid-area: sec2;
+        background-color: rgba(219, 63, 63, 0.589);
+    }
+    .sec3{
+        grid-area: sec3;
+        background-color: teal;
+    }
+</style>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Logo</h1>
+            <ul class="menu">
+               <li><a href="#">Home</a></li>
+               <li><a href="#">New</a></li>
+               <li><a href="#">Popular</a></li>
+               <li><a href="#">Trending</a></li>
+               <li><a href="#">Categories</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main"><section class="sec1"></section>
+        <section class="sec2"></section>
+        <section class="sec3"></section>
+    </main>
+    
+    
+</body>
+</html>
